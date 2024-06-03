@@ -1,0 +1,26 @@
+<%- include("partials/header") %>
+
+<div class="container my-5">
+  <div class="row">
+    <div class="col-md-4">
+      <img src="<%= book.image %>" class="img-fluid" alt="<%= book.title %>" />
+    </div>
+    <div class="col-md-8 content-color">
+      <h2><%= book.title %></h2>
+      <p><strong>Author:</strong> <%= book.author %></p>
+      <p><strong>Publisher:</strong> <%= book.publisher %></p>
+      <p><strong>ISBN:</strong> <%= book.isbn %></p>
+      <p><strong>Pages:</strong> <%= book.pages %></p>
+      <p><strong>Price:</strong> $<%= book.price %></p>
+      <p><strong>Description:</strong> <%= book.description %></p>
+      <p><strong>Categories:</strong> <%= book.categories.join(', ') %></p>
+      <form action="/add-to-basket/<%= book._id %>" method="POST">
+        <button type="submit" class="btn btn-m btn-success">
+          Add to Basket
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<%- include("partials/footer") %>

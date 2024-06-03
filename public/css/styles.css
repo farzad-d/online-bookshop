@@ -1,0 +1,350 @@
+/* Homepage ============================================================ */
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+/* Search bar */
+.form-inline .form-control {
+  width: 450px; /* Adjust the width as needed */
+  background-color: #343a40; /* Lighter background */
+  border-color: #343a40; /* Darker border color */
+  transition: background-color 0.5s, color 0.5s; /* Add transition effect */
+}
+.form-inline .form-control:focus {
+  background-color: #ffffff; /* White background when selected */
+  color: #343a40; /* Dark text color when selected */
+}
+.search-container {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 450px; /* Fixed size */
+}
+
+/* Make placeholder text white */
+.form-inline .form-control::placeholder {
+  color: #cccccc; /* White placeholder text */
+}
+
+/* Dark Theme */
+body {
+  background-color: #343a40; /* Dark background */
+  color: #ffffff; /* Light text */
+  margin-bottom: 100px; /* Adjust according to the height of your footer */
+}
+
+/* Navbar Styling */
+.navbar-expand-md .navbar-nav .nav-link {
+  padding: 0 8px; /* Adjust the padding as needed */
+  transition: color 0.5s; /* Add transition effect */
+}
+.navbar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Hover effect for links and icons */
+.nav-link:hover,
+.basket-icon:hover,
+.navbar-brand:hover,
+.navbar-nav .nav-link:hover,
+.navbar-nav .category-link:hover,
+.navbar-nav .btn:hover {
+  color: #ffffff !important;
+}
+
+/* Navbar background color */
+.navbar-dark {
+  background-color: #00000080 !important; /* Dark transparent background */
+}
+
+/* Category Bar background color */
+.navbar-dark + .navbar-dark {
+  background-color: #00000035 !important; /* Dark transparent background */
+}
+
+/* Custom CSS for changing colors */
+.navbar-nav .nav-link,
+.navbar-brand,
+.navbar-nav .category-link,
+.navbar-nav .btn {
+  color: #f0f0f0 !important;
+}
+
+.basket-icon {
+  color: #f0f0f0 !important;
+}
+
+.nav-link:hover,
+.basket-icon:hover,
+.navbar-brand:hover,
+.navbar-nav .nav-link:hover,
+.navbar-nav .category-link:hover,
+.navbar-nav .btn:hover {
+  color: #888888 !important; /* Keep hover effect color */
+}
+
+/* Login/Register/Logout ============================================================ */
+
+.form-control {
+  width: 100%; /* Take up full width */
+  background-color: #5a6268; /* Lighter background */
+  border-color: #343a40; /* Darker border color */
+  color: #ffffff; /* Light text */
+  transition: all 0.5s; /* Transition effect */
+}
+/* Make placeholder text white */
+.form-control::placeholder {
+  color: #cccccc; /* White placeholder text */
+}
+/* Register form container */
+.login-register-container {
+  max-width: 400px;
+  margin: auto;
+  margin-top: 100px;
+  padding: 20px;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+}
+/* Register button */
+.login-register-btn {
+  width: 100%; /* Take up full width */
+}
+
+/* Ensure the navbar items are centered vertically */
+.navbar-nav .nav-item .nav-link {
+  display: flex;
+  align-items: center;
+}
+
+/* Cards ============================================================ */
+
+.card {
+  height: 90%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background-color: #282828;
+  color: #dddddd;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.card img {
+  height: 200px;
+  object-fit: contain;
+  padding: 10px;
+}
+
+.card-body {
+  flex: 1 1 auto;
+  padding: 0.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensure space is used efficiently */
+}
+
+.card-footer {
+  padding: 0.75rem 1.25rem;
+  padding-bottom: 20px;
+  background-color: #00000008;
+  border-top: 1px solid #00000020;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card .price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+/* Adjust margin between cards */
+.row.no-gutters > [class*="col-"] {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+/* Button group to adjust the spacing between buttons */
+.button-group {
+  gap: 5px; /* Adjust the gap as needed */
+}
+
+.button-group .btn {
+  margin: 0; /* Remove any default margin on the buttons */
+  flex: 1; /* Make buttons take equal space */
+}
+
+/* Book Detail ============================================================ */
+.content-color {
+  color: #dddddd;
+}
+
+/* Footer ============================================================ */
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #343a40;
+}
+
+/* Add Book ============================================================ */
+#image {
+  height: 44px;
+}
+
+/* Basket & Profile Icons ============================================================ */
+.basket-icon,
+.profile-icon {
+  font-size: 24px; /* Adjust the font size */
+  color: #f0f0f0 !important;
+  transition: color 0.5s;
+}
+
+.basket-icon:hover,
+.profile-icon:hover {
+  color: #888888 !important;
+}
+
+/* Add space between profile icon and logout link */
+.profile-icon {
+  margin-right: 15px; /* Adjust the space as needed */
+}
+
+/* Larger Basket Icon */
+.basket-icon {
+  font-size: 24px; /* Adjust the font size as needed */
+  transition: color 0.5s; /* Add transition effect */
+}
+/* Basket Badge Counter */
+.badge {
+  background-color: limegreen; /* Change the background color as needed */
+  color: #000000; /* Change the text color as needed */
+  padding: 2px 4px; /* Smaller padding */
+  font-size: 14px; /* Smaller font size */
+  border-radius: 50%; /* Make the badge circular */
+  position: absolute; /* Absolute positioning */
+  top: -10px; /* Adjust position as needed */
+  right: 35px; /* Adjust position as needed */
+}
+
+/* Basket ============================================================ */
+.basket-container {
+  margin-top: 30px;
+}
+.basket-item {
+  background-color: #282828;
+  color: #dddddd;
+  border: 2px solid #000000;
+}
+.basket-item-info {
+  display: flex;
+  align-items: center;
+}
+.basket-item-img {
+  width: 50px;
+  height: auto;
+  margin-right: 15px;
+}
+.basket-item-details p {
+  margin: 0;
+}
+.basket-summary {
+  text-align: center;
+  font-size: 1.2em;
+}
+.btn-danger,
+.btn-warning,
+.btn-success {
+  margin: 5px 0;
+}
+
+/* Profile ============================================================ */
+/* Style for disabled input fields */
+input:disabled {
+  background-color: #282828 !important;
+  color: #dddddd;
+}
+.profile-hr {
+  border-top: 1px solid #ffffff;
+}
+
+.profile-form-btn {
+  width: 100%; /* Take up full width */
+}
+
+/* Responsiveness ============================================================ */
+.card-container {
+  flex: 0 0 20%;
+  max-width: 16%;
+  padding: 15px;
+}
+
+@media (max-width: 1200px) {
+  .card-container {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+}
+
+@media (max-width: 992px) {
+  .card-container {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+  }
+}
+
+/* Adjust the search bar width on smaller screens */
+@media (max-width: 768px) {
+  .navbar .form-inline {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .card-container {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .navbar .form-inline input {
+    width: 100%;
+  }
+
+  .badge {
+    top: 0px; /* Adjust position as needed */
+    right: 38px; /* Adjust position as needed */
+  }
+}
+
+@media (min-width: 768px) {
+  .center-search {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+/* Adjust the alignment of icons and links on smaller screens */
+@media (max-width: 576px) {
+  .navbar .basket-icon,
+  .navbar .profile-icon,
+  .navbar .logout-link,
+  .navbar .nav-link {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .card-container {
+    flex: 0 0 100%;
+    max-width: 50%;
+  }
+
+  .badge {
+    top: 0px; /* Adjust position as needed */
+    right: 38px; /* Adjust position as needed */
+  }
+}

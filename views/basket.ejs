@@ -1,0 +1,60 @@
+<%- include("partials/header") %>
+
+<!-- Basket Page -->
+<div class="container basket-container">
+  <h2 class="text-center mb-5">Your Basket</h2>
+
+  <% if (basket.items.length > 0) { %>
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <ul class="list-group mb-4">
+        <% basket.items.forEach(item => { %>
+        <li
+          class="list-group-item d-flex justify-content-between align-items-center basket-item"
+        >
+          <div class="basket-item-info">
+            <img
+              src="<%= item.bookId.image %>"
+              alt="<%= item.bookId.title %>"
+              class="basket-item-img"
+            />
+            <div class="basket-item-details">
+              <p><strong>Title:</strong> <%= item.bookId.title %></p>
+              <p><strong>Author:</strong> <%= item.bookId.author %></p>
+              <p><strong>ISBN:</strong> <%= item.bookId.isbn %></p>
+              <p><strong>Price:</strong> $<%= item.bookId.price %></p>
+              <p><strong>Quantity:</strong> <%= item.quantity %></p>
+            </div>
+          </div>
+          <form
+            action="/remove-from-basket/<%= item.bookId._id %>"
+            method="POST"
+          >
+            <button type="submit" class="btn btn-outline-light btn-sm">
+              X
+            </button>
+          </form>
+        </li>
+        <% }); %>
+      </ul>
+
+      <div class="basket-summary">
+        <p><strong>Total Items:</strong> <%= itemCount %></p>
+        <p><strong>Total Price:</strong> $<%= total %></p>
+        <form action="/clear-basket" method="POST" class="d-inline-block">
+          <button type="submit" class="btn btn-danger">Clear Basket</button>
+        </form>
+        <form action="/payment" method="GET" class="d-inline-block">
+          <button type="submit" class="btn btn-primary">
+            Proceed to Payment
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <% } else { %>
+  <p class="text-center">Your basket is empty.</p>
+  <% } %>
+</div>
+
+<%- include("partials/footer") %>

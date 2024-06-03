@@ -1,0 +1,46 @@
+<%- include("partials/header") %>
+
+<body>
+  <div class="container login-register-container mt-5">
+    <h2 class="text-center mb-5">Register for Bookshop</h2>
+
+    <% if (errors.length > 0) { %>
+      <% errors.forEach(function(error) { %>
+        <div class="alert alert-danger"><%= error.msg %></div>
+      <% }) %>
+    <% } %>
+
+    <form action="/users/register" method="POST">
+      <div class="form-group">
+        <label for="fullname">Full Name</label>
+        <input type="text" class="form-control" id="fullname" name="fullname" value="<%= typeof fullname != 'undefined' ? fullname : '' %>"/>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" name="email" value="<%= typeof email != 'undefined' ? email : '' %>"/>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone</label>
+        <input type="text" class="form-control" id="phone" name="phone" value="<%= typeof phone != 'undefined' ? phone : '' %>"/>
+      </div>
+      <div class="form-group">
+        <label for="address">Address</label>
+        <input type="text" class="form-control" id="address" name="address" value="<%= typeof address != 'undefined' ? address : '' %>"/>
+      </div>
+      <div class="form-group">
+        <label for="postalCode">Postal Code</label>
+        <input type="text" class="form-control" id="postalCode" name="postalCode" value="<%= typeof postalCode != 'undefined' ? postalCode : '' %>"/>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" name="password"/>
+      </div>
+      <div class="form-group">
+        <label for="confirmPassword">Confirm Password</label>
+        <input type="password" class="form-control" id="confirmPassword" name="confirmPassword"/>
+      </div>
+      <button type="submit" class="btn btn-light login-register-btn">Register</button>
+    </form>
+  </div>
+
+<%- include("partials/footer") %>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bookshop</title>
+  <link rel="shortcut icon" href="/favicon.png" type="image/png">
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Font Awesome CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <!-- Link to external CSS file -->
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+
+<body>
+  <!-- Top Navbar -->
+  <nav class="navbar navbar-expand-md navbar-dark">
+    <div class="container-fluid">
+      <!-- Logo -->
+      <a class="navbar-brand" href="/"><img src="/images/logo.png" alt="Logo"></a>
+      <!-- Navbar Toggle Button for smaller screens -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Basket Icon, always visible -->
+      <a class="nav-link basket-icon d-md-none" href="/basket" style="position: relative;">
+        <i class="fas fa-shopping-basket"></i>
+        <% if (basketItemCount > 0) { %>
+          <span class="badge badge-danger basket-badge"><%= basketItemCount %></span>
+        <% } %>
+      </a>
+      <!-- Search Bar for larger screens -->
+      <div class="center-search d-none d-md-block">
+        <form class="form-inline" action="/search" method="GET">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="query">
+        </form>
+      </div>
+      <!-- Navbar Content -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <!-- Search Bar for smaller screens -->
+          <li class="nav-item d-md-none">
+            <form class="form-inline" action="/search" method="GET">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="query">
+            </form>
+          </li>
+          <!-- Basket Icon for larger screens -->
+          <li class="nav-item d-none d-md-block">
+            <a class="nav-link basket-icon" href="/basket" style="position: relative;">
+              <i class="fas fa-shopping-basket"></i>
+              <% if (basketItemCount > 0) { %>
+                <span class="badge badge-danger basket-badge"><%= basketItemCount %></span>
+              <% } %>
+            </a>
+          </li>
+          <!-- Conditional rendering for Login/Register or Profile/Logout -->
+          <% if (user) { %>
+            <li class="nav-item">
+              <a class="nav-link profile-icon" href="/profile"><i class="fas fa-user-circle"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link logout-link" href="/logout">Logout</a>
+            </li>
+          <% } else { %>
+            <li class="nav-item">
+              <a class="nav-link" href="/login">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/register">Register</a>
+            </li>
+          <% } %>
+        </ul>
+      </div>
+    </div>
+  </nav>

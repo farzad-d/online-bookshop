@@ -1,0 +1,45 @@
+<%- include("partials/header") %>
+
+<body>
+  <!-- Login form -->
+  <div class="container login-register-container">
+    <h2 class="text-center mb-5">Login to Bookshop</h2>
+
+    <% if (typeof success_msg !== 'undefined' && success_msg.length > 0) { %>
+      <div class="alert alert-success">
+        <%= success_msg %>
+      </div>
+    <% } %>
+    
+    <% if (typeof error_msg !== 'undefined' && error_msg.length > 0) { %>
+      <div class="alert alert-danger">
+        <%= error_msg %>
+      </div>
+    <% } %>
+
+    <form action="/login" method="POST">
+      <div class="form-group">
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          name="email"
+          placeholder="Email"
+        />
+      </div>
+      <div class="form-group">
+        <input
+          type="password"
+          class="form-control"
+          id="password"
+          name="password"
+          placeholder="Password"
+        />
+      </div>
+      <button type="submit" class="btn btn-light login-register-btn">
+        Login
+      </button>
+    </form>
+  </div>
+
+<%- include("partials/footer") %>
