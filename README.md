@@ -1,14 +1,14 @@
-**Online Bookshop Project**
+# Online Bookshop Project
 
-Project Description:
+**Project Description:**
 This online bookshop is a university project developed by Farzad Daneshpour, an IT student at UAST.
 
-Technologies:
+**Technologies:**
 Frontend: Bootstrap, HTML, CSS, JavaScript
 Backend: Node.js, Express.js
 Database: MongoDB
 
-Usage:
+**Usage:**
 1.Clone the repository:
 git clone https://github.com/farzad-d/online-bookshop.git
 2.Install dependencies:
