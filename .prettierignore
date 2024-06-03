@@ -1,8 +1,0 @@
-# Ignore formatting for:
-header.ejs
-footer.ejs
-home.ejs
-login.ejs
-register.ejs
-add-book.ejs
-profile.ejs
