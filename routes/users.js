@@ -4,17 +4,16 @@ import bcrypt from "bcrypt";
 import passport from "passport";
 import User from "../models/User.js";
 
-// Register Page
+// Register
 router.get("/register", (req, res) => {
   res.render("register", {
     errors: [],
     success_msg: req.flash("success_msg"),
     error_msg: req.flash("error_msg"),
-    user: req.user || null, // Pass the user variable or null if not logged in
+    user: req.user || null,
   });
 });
 
-// Register Handle
 router.post("/register", (req, res) => {
   const {
     fullname,
@@ -105,10 +104,9 @@ router.post("/register", (req, res) => {
   }
 });
 
-// Login Page
+// Login
 router.get("/login", (req, res) => res.render("login"));
 
-// Login Handle
 router.post("/login", (req, res, next) => {
   passport.authenticate("local", {
     successRedirect: "/",

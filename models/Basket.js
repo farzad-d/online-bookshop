@@ -22,4 +22,5 @@ const BasketSchema = new mongoose.Schema({
 });
 
 const Basket = mongoose.model("Basket", BasketSchema);
+
 export default Basket;

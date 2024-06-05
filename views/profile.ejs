@@ -3,17 +3,11 @@
 <div class="container login-register-container mt-5">
   <h2 class="mb-5">Profile</h2>
 
-    <% if (typeof success_msg !== 'undefined' && success_msg.length > 0) { %>
-      <div class="alert alert-success">
-        <%= success_msg %>
-      </div>
-    <% } %>
-    
-    <% if (typeof error_msg !== 'undefined' && error_msg.length > 0) { %>
-      <div class="alert alert-danger">
-        <%= error_msg %>
-      </div>
-    <% } %>
+  <% if (typeof success_msg !== 'undefined' && success_msg.length > 0) { %>
+  <div class="alert alert-success"><%= success_msg %></div>
+  <% } %> <% if (typeof error_msg !== 'undefined' && error_msg.length > 0) { %>
+  <div class="alert alert-danger"><%= error_msg %></div>
+  <% } %>
 
   <form id="profileForm" action="/profile" method="POST">
     <div class="form-group">

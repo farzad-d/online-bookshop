@@ -7,38 +7,36 @@ html {
 
 /* Search bar */
 .form-inline .form-control {
-  width: 450px; /* Adjust the width as needed */
-  background-color: #343a40; /* Lighter background */
-  border-color: #343a40; /* Darker border color */
-  transition: background-color 0.5s, color 0.5s; /* Add transition effect */
+  width: 450px;
+  background-color: #343a40;
+  border-color: #343a40;
+  transition: background-color 0.5s, color 0.5s;
 }
 .form-inline .form-control:focus {
-  background-color: #ffffff; /* White background when selected */
-  color: #343a40; /* Dark text color when selected */
+  background-color: #ffffff;
+  color: #343a40;
 }
 .search-container {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  width: 450px; /* Fixed size */
+  width: 450px;
 }
 
-/* Make placeholder text white */
 .form-inline .form-control::placeholder {
-  color: #cccccc; /* White placeholder text */
+  color: #cccccc;
 }
 
-/* Dark Theme */
 body {
-  background-color: #343a40; /* Dark background */
-  color: #ffffff; /* Light text */
-  margin-bottom: 100px; /* Adjust according to the height of your footer */
+  background-color: #343a40;
+  color: #ffffff;
+  margin-bottom: 100px;
 }
 
-/* Navbar Styling */
+/* Navbar */
 .navbar-expand-md .navbar-nav .nav-link {
-  padding: 0 8px; /* Adjust the padding as needed */
-  transition: color 0.5s; /* Add transition effect */
+  padding: 0 8px;
+  transition: color 0.5s;
 }
 .navbar {
   position: relative;
@@ -46,8 +44,11 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+.navbar-dark {
+  background-color: #00000080 !important;
+}
 
-/* Hover effect for links and icons */
+/* Hover effect */
 .nav-link:hover,
 .basket-icon:hover,
 .navbar-brand:hover,
@@ -57,17 +58,11 @@ body {
   color: #ffffff !important;
 }
 
-/* Navbar background color */
-.navbar-dark {
-  background-color: #00000080 !important; /* Dark transparent background */
-}
-
-/* Category Bar background color */
+/* Category bar */
 .navbar-dark + .navbar-dark {
-  background-color: #00000035 !important; /* Dark transparent background */
+  background-color: #00000035 !important;
 }
 
-/* Custom CSS for changing colors */
 .navbar-nav .nav-link,
 .navbar-brand,
 .navbar-nav .category-link,
@@ -85,23 +80,22 @@ body {
 .navbar-nav .nav-link:hover,
 .navbar-nav .category-link:hover,
 .navbar-nav .btn:hover {
-  color: #888888 !important; /* Keep hover effect color */
+  color: #888888 !important;
 }
 
 /* Login/Register/Logout ============================================================ */
 
 .form-control {
-  width: 100%; /* Take up full width */
-  background-color: #5a6268; /* Lighter background */
-  border-color: #343a40; /* Darker border color */
-  color: #ffffff; /* Light text */
-  transition: all 0.5s; /* Transition effect */
+  width: 100%;
+  background-color: #5a6268;
+  border-color: #343a40;
+  color: #ffffff;
+  transition: all 0.5s;
 }
-/* Make placeholder text white */
 .form-control::placeholder {
-  color: #cccccc; /* White placeholder text */
+  color: #cccccc;
 }
-/* Register form container */
+/* Register form */
 .login-register-container {
   max-width: 400px;
   margin: auto;
@@ -112,10 +106,9 @@ body {
 }
 /* Register button */
 .login-register-btn {
-  width: 100%; /* Take up full width */
+  width: 100%;
 }
 
-/* Ensure the navbar items are centered vertically */
 .navbar-nav .nav-item .nav-link {
   display: flex;
   align-items: center;
@@ -144,7 +137,7 @@ body {
   padding: 0.5rem 1rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Ensure space is used efficiently */
+  justify-content: space-between;
 }
 
 .card-footer {
@@ -162,28 +155,29 @@ body {
   margin-bottom: 16px;
 }
 
-/* Adjust margin between cards */
+/* Margin between cards */
 .row.no-gutters > [class*="col-"] {
   padding-left: 5px;
   padding-right: 5px;
 }
 
-/* Button group to adjust the spacing between buttons */
 .button-group {
-  gap: 5px; /* Adjust the gap as needed */
+  gap: 5px;
 }
 
 .button-group .btn {
-  margin: 0; /* Remove any default margin on the buttons */
-  flex: 1; /* Make buttons take equal space */
+  margin: 0;
+  flex: 1;
 }
 
-/* Book Detail ============================================================ */
+/* Book details ============================================================ */
+
 .content-color {
   color: #dddddd;
 }
 
 /* Footer ============================================================ */
+
 .footer {
   position: absolute;
   bottom: 0;
@@ -191,15 +185,17 @@ body {
   background-color: #343a40;
 }
 
-/* Add Book ============================================================ */
+/* Add Book page ============================================================ */
+
 #image {
   height: 44px;
 }
 
-/* Basket & Profile Icons ============================================================ */
+/* Basket & Profile icons ============================================================ */
+
 .basket-icon,
 .profile-icon {
-  font-size: 24px; /* Adjust the font size */
+  font-size: 24px;
   color: #f0f0f0 !important;
   transition: color 0.5s;
 }
@@ -209,53 +205,59 @@ body {
   color: #888888 !important;
 }
 
-/* Add space between profile icon and logout link */
 .profile-icon {
-  margin-right: 15px; /* Adjust the space as needed */
+  margin-right: 15px;
 }
 
-/* Larger Basket Icon */
 .basket-icon {
-  font-size: 24px; /* Adjust the font size as needed */
-  transition: color 0.5s; /* Add transition effect */
+  font-size: 24px;
+  transition: color 0.5s;
 }
+
 /* Basket Badge Counter */
 .badge {
-  background-color: limegreen; /* Change the background color as needed */
-  color: #000000; /* Change the text color as needed */
-  padding: 2px 4px; /* Smaller padding */
-  font-size: 14px; /* Smaller font size */
-  border-radius: 50%; /* Make the badge circular */
-  position: absolute; /* Absolute positioning */
-  top: -10px; /* Adjust position as needed */
-  right: 35px; /* Adjust position as needed */
+  background-color: limegreen;
+  color: #000000;
+  padding: 2px 4px;
+  font-size: 14px;
+  border-radius: 50%;
+  position: absolute;
+  top: -10px;
+  right: 35px;
 }
 
 /* Basket ============================================================ */
+
 .basket-container {
   margin-top: 30px;
 }
+
 .basket-item {
   background-color: #282828;
   color: #dddddd;
   border: 2px solid #000000;
 }
+
 .basket-item-info {
   display: flex;
   align-items: center;
 }
+
 .basket-item-img {
   width: 50px;
   height: auto;
   margin-right: 15px;
 }
+
 .basket-item-details p {
   margin: 0;
 }
+
 .basket-summary {
   text-align: center;
   font-size: 1.2em;
 }
+
 .btn-danger,
 .btn-warning,
 .btn-success {
@@ -263,7 +265,8 @@ body {
 }
 
 /* Profile ============================================================ */
-/* Style for disabled input fields */
+
+/* Disabled input fields */
 input:disabled {
   background-color: #282828 !important;
   color: #dddddd;
@@ -273,10 +276,11 @@ input:disabled {
 }
 
 .profile-form-btn {
-  width: 100%; /* Take up full width */
+  width: 100%;
 }
 
 /* Responsiveness ============================================================ */
+
 .card-container {
   flex: 0 0 20%;
   max-width: 16%;
@@ -297,26 +301,22 @@ input:disabled {
   }
 }
 
-/* Adjust the search bar width on smaller screens */
 @media (max-width: 768px) {
   .navbar .form-inline {
     width: 100%;
     margin-top: 10px;
     margin-bottom: 10px;
   }
-
   .card-container {
     flex: 0 0 50%;
     max-width: 50%;
   }
-
   .navbar .form-inline input {
     width: 100%;
   }
-
   .badge {
-    top: 0px; /* Adjust position as needed */
-    right: 38px; /* Adjust position as needed */
+    top: 0px;
+    right: 38px;
   }
 }
 
@@ -328,7 +328,6 @@ input:disabled {
   }
 }
 
-/* Adjust the alignment of icons and links on smaller screens */
 @media (max-width: 576px) {
   .navbar .basket-icon,
   .navbar .profile-icon,
@@ -337,14 +336,28 @@ input:disabled {
     margin-left: 5px;
     margin-right: 5px;
   }
-
   .card-container {
     flex: 0 0 100%;
     max-width: 50%;
   }
-
   .badge {
-    top: 0px; /* Adjust position as needed */
-    right: 38px; /* Adjust position as needed */
+    top: 0px;
+    right: 38px;
   }
 }
+
+/* Logo and Navbar ============================================================ */
+
+/* Fixed height */
+.navbar {
+  height: 70px;
+  overflow: hidden;
+  padding: 0;
+}
+
+.navbar-brand img {
+  height: 48px;
+  object-fit: contain;
+}
+
+/* ============================================================ */
