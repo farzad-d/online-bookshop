@@ -5,7 +5,8 @@
 
   <% if (typeof success_msg !== 'undefined' && success_msg.length > 0) { %>
   <div class="alert alert-success" role="alert"><%= success_msg %></div>
-  <% } %> <% if (typeof error_msg !== 'undefined' && error_msg.length > 0) { %>
+  <% } %> 
+  <% if (typeof error_msg !== 'undefined' && error_msg.length > 0) { %>
   <div class="alert alert-danger" role="alert"><%= error_msg %></div>
   <% } %>
 
@@ -18,6 +19,16 @@
         id="image"
         name="image"
         accept="image/*"
+      />
+    </div>
+    <div class="form-group">
+      <label for="imageLink">Or Image Link</label>
+      <input
+        type="url"
+        class="form-control"
+        id="imageLink"
+        name="imageLink"
+        placeholder="http://example.com/image.jpg"
       />
     </div>
     <div class="form-group">

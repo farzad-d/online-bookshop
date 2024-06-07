@@ -21,7 +21,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // Mongoose
 // const db = "mongodb://localhost:27017/bookshopDB";
-const db = `mongodb+srv://admin-farzad:${process.env.DB_PASS}@cluster0.llywomm.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0/bookshopDB`;
+const db = `mongodb+srv://admin-farzad:${process.env.DB_PASS}@cluster0.llywomm.mongodb.net/bookshopDB?retryWrites=true&w=majority&appName=Cluster0`;
 
 mongoose
   .connect(db)
@@ -190,9 +190,11 @@ app.post("/add-book", upload.single("image"), (req, res) => {
     isbn,
     pages,
     categories,
+    imageLink,
   } = req.body;
+
   const newBook = new Book({
-    image: req.file ? `/uploads/${req.file.filename}` : "",
+    image: req.file ? `/uploads/${req.file.filename}` : imageLink || "",
     title,
     author,
     publisher,
