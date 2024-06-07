@@ -350,7 +350,6 @@ input:disabled {
 
 /* Fixed height */
 .navbar {
-  height: 70px;
   overflow: hidden;
   padding: 0;
 }
