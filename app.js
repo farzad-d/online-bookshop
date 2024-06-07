@@ -20,8 +20,8 @@ app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Mongoose
-const db = "mongodb://localhost:27017/bookshopDB";
-// const db = `mongodb+srv://admin-farzad:${process.env.DB_PASS}@cluster0.llywomm.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0/bookshopDB`;
+// const db = "mongodb://localhost:27017/bookshopDB";
+const db = `mongodb+srv://admin-farzad:${process.env.DB_PASS}@cluster0.llywomm.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0/bookshopDB`;
 
 mongoose
   .connect(db)
