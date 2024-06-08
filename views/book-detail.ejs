@@ -12,7 +12,9 @@
       <p><strong>ISBN:</strong> <%= book.isbn %></p>
       <p><strong>Pages:</strong> <%= book.pages %></p>
       <p><strong>Price:</strong> $<%= book.price %></p>
-      <p><strong>Description:</strong> <%= book.description %></p>
+      <p class="text-justify">
+        <strong>Description:</strong> <%= book.description %>
+      </p>
       <p><strong>Categories:</strong> <%= book.categories.join(', ') %></p>
       <form action="/add-to-basket/<%= book._id %>" method="POST">
         <button type="submit" class="btn btn-m btn-success">
